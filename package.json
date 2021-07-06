@@ -6,25 +6,35 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix run",
-    "start": "remix-serve build"
+    "start": "remix-serve build",
+    "tw": "tailwindcss --jit --purge=\"./app/**/*.{ts,tsx}\" --output app/styles/tailwind.css",
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@remix-run/node": "^0.17.5",
     "@remix-run/react": "^0.17.5",
+    "@remix-run/serve": "^0.17.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^6.0.0-beta.0",
     "remix": "^0.17.5",
-    "@remix-run/serve": "^0.17.5",
-    "@remix-run/node": "^0.17.5"
+    "tailwindcss": "^2.2.4"
   },
   "devDependencies": {
     "@remix-run/dev": "^0.17.5",
     "@types/react": "^17.0.4",
     "@types/react-dom": "^17.0.4",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2",
     "typescript": "^4.1.2"
   },
   "engines": {
     "node": ">=14"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "lint-staged": {
+    "*.{json,css,ts,tsx,md}": "prettier --write"
+  }
 }
