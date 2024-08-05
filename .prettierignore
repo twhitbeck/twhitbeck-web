@@ -1,8 +1,13 @@
-node_modules/
-.vscode/
+# Ignore everything
+/*
 
-/.cache
-/build
-/public/build
-
-app/styles/tailwind.css
+# Except these files & folders
+!/src
+!/public
+!/.github
+!tsconfig.json
+!astro.config.ts
+!package.json
+!.prettierrc
+!.eslintrc.js
+!README.md
